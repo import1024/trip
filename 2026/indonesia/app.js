@@ -13,5 +13,17 @@ function jump(){const s=state(now());manual=false;selected=s.current?.day??0;ren
 $('live').onclick=()=>{simulation=null;manual=false;tick(true);jump()};$('jump').onclick=jump;
 $('simulate').onclick=()=>{const v=$('simTime').value;if(!v){toast('请选择日期和时间');return}const t=Date.parse(v+'+08:00');if(!Number.isFinite(t)){toast('时间格式无效');return}simulation=t;manual=false;tick(true);$('simulate').closest('details').open=false;};
 function toast(t){$('toast').textContent=t;$('toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').style.display='none',5000);}
-$('share').onclick=async()=>{const data={title:'群岛之间 · 印尼旅行助手',text:'我们的 8 天旅行：实时行程、倒计时与 Google Maps。',url:location.href.split('#')[0]};try{if(navigator.share)await navigator.share(data);else if(navigator.clipboard){await navigator.clipboard.writeText(data.url);toast('链接已复制，可以发给同行伙伴')}else prompt('复制此链接分享',data.url)}catch(e){if(e.name!=='AbortError')prompt('复制此链接分享',data.url)}};
+$('share').onclick=async()=>{
+ const url=location.origin+location.pathname;
+ try{
+  if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');
+  await navigator.clipboard.writeText(url);
+  $('share').textContent='已复制 ✓';
+  toast('链接已复制，可以粘贴到微信或发给朋友');
+  clearTimeout(toast.copyTimer);
+  toast.copyTimer=setTimeout(()=>$('share').textContent='复制链接',3000);
+ }catch(e){
+  prompt('自动复制未成功，请长按或选中下方链接复制',url);
+ }
+};
 tick(true);setInterval(()=>tick(),1000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick(true)});
