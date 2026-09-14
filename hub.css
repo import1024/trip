@@ -2,3 +2,6 @@
 
 /* Keep the complete cover visible at its natural ratio. */
 .trip{align-items:start}.trip img{height:auto;aspect-ratio:1122/1402;object-fit:cover}.trip h3{overflow-wrap:anywhere}
+
+
+:root{color:#2c2418;background:#faf8f3}header,.brand,.trip{color:#2c2418}a,.open{color:#b74b36}.intro p,.trip p,.sectionhead span,.meta{color:#706354}.intro h1,.trip h3,.featured h2{font-family:'Songti SC',SimSun,serif}.featured{background:#3e2f24;border-top-color:#d4883e}.featured .eyebrow{color:#ebc49c}.featured p,.count{color:#e1d1bf}.button{background:#f0d6ad;color:#3e2f24}.count{border-color:#77624e}.trip{border-color:#e8e2d6;box-shadow:0 2px 12px #2c241806}.trip:hover{border-color:#c8553d}.badge{background:#f0ebe1;color:#79543a}.noimage{min-height:238px;background:#4a3728;color:#e8a854;font-family:SimSun,serif;font-size:32px;writing-mode:vertical-rl;letter-spacing:8px}.trip img{object-fit:contain}footer{color:#706354}@media(max-width:680px){.noimage{min-height:142px;font-size:22px;letter-spacing:4px}}
