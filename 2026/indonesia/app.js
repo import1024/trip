@@ -18,10 +18,7 @@ $('share').onclick=async()=>{
  try{
   if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');
   await navigator.clipboard.writeText(url);
-  $('share').textContent='已复制 ✓';
   toast('链接已复制，可以粘贴到微信或发给朋友');
-  clearTimeout(toast.copyTimer);
-  toast.copyTimer=setTimeout(()=>$('share').textContent='复制链接',3000);
  }catch(e){
   prompt('自动复制未成功，请长按或选中下方链接复制',url);
  }
