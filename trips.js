@@ -4,13 +4,13 @@
 window.TRIPS = [
   {
     id: 'indonesia-2026',
-    title: '印尼 · 巴厘岛 · 吉隆坡',
+    title: '群岛之间',
     dates: '2026.10.01—10.08',
     start: '2026-10-01T07:50:00+08:00',
     end: '2026-10-09T00:30:00+08:00',
     path: '2026/indonesia/',
-    image: '2026/indonesia/poster.png',
-    summary: '爪哇火山、雨林瀑布、巴厘岛海岸，再到吉隆坡。',
+    image: '2026/indonesia/poster-v2.jpg',
+    summary: '印尼 · 巴厘岛 · 吉隆坡。从爪哇的火山与雨林，到巴厘岛的海岸。',
     people: '3 人同行',
     type: '实时行程',
     note: '10 月 9 日凌晨抵达广州'
