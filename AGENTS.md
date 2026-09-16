@@ -7,7 +7,9 @@ This file is the short operational contract for AI agents and automation. Read `
 ## Core rules
 
 - Treat the repository as the source of truth for the current site structure and implementation.
-- Treat `trips.js` as the single canonical manifest for trips shown on the homepage. Do not create a second trip registry unless the architecture is intentionally migrated.
+- Treat `trips.js` as the single canonical manifest for the current **travel plans** shown on the homepage. Do not create a second plan registry unless the architecture is intentionally migrated.
+- The current journeys are plans, not post-trip records. Do not present planned activities as things that actually happened.
+- Future **旅途记录 / journey records** may be added as a separate content layer for actual experiences, reflections, and photographs. Preserve the original plan rather than silently rewriting it into a record.
 - Do not invent itinerary facts, times, bookings, prices, addresses, transport details, entry rules, or visited experiences. Use the user's supplied material. When historical material is only a plan, label it as a plan/archive rather than implying it happened.
 - Preserve existing trip pages unless the user asks to redesign them. The site intentionally allows different page types and layouts.
 - Keep `CNAME` equal to `trip.redback.me`.
@@ -20,9 +22,9 @@ This file is the short operational contract for AI agents and automation. Read `
 3. Inspect one or two nearby existing trips for current conventions instead of relying on memory.
 4. Prefer the smallest coherent change. Do not restyle unrelated trips or clean up legacy files opportunistically.
 
-## Publishing a new trip
+## Publishing a new trip plan
 
-When the user says "发布到旅游日志", "发表到旅游日志", "加入旅行日志", or equivalent, interpret it as an execution request when repository write access is available.
+When the user says "发布到旅游日志", "发表到旅游日志", "加入旅行日志", or equivalent while discussing a future or planned journey, interpret it as an execution request to publish/update a **旅途计划** when repository write access is available.
 
 Default workflow:
 
@@ -35,6 +37,20 @@ Default workflow:
 7. If a referenced JS/CSS file changed and the page uses query-string cache busting, bump the corresponding `?v=` value.
 8. Check relative links, favicon, return-to-log navigation, share behavior, mobile layout, desktop layout, and basic no-JavaScript readability.
 9. Commit the complete change to `main` unless the user asks for a branch/PR.
+
+## Plan vs. journey record
+
+Treat these as different artifacts:
+
+- **旅途计划**: what is intended before or during the trip — itinerary, transport, lodging, candidates, weather-dependent choices, photography spots, preparation notes.
+- **旅途记录**: what actually happened — selected photographs, observations, reflections, changes from the plan, memorable details, and post-trip writing.
+
+Default behavior:
+
+- Keep plans intact as historical planning artifacts after the trip.
+- Do not convert plan text into factual post-trip narrative without user-provided evidence.
+- When journey records are introduced, give them a distinct navigation/section or data model rather than mixing them into `trips.js` by accident.
+- A plan and its journey record may link to each other.
 
 ## Page types
 
@@ -49,6 +65,7 @@ Do not force every old page into the newest template. Consistency should come fr
 ## Site-wide invariants
 
 - Root page remains the travel-log hub: `Redback · 旅行日志`.
+- The current collection heading is `旅途计划`; reserve `旅途记录` for actual post-trip records when that section exists.
 - Brand tone is travel journal / memory archive, not a generic tourism portal.
 - Mobile and desktop must both remain first-class.
 - A trip URL must work when shared directly without requiring navigation through the homepage.
