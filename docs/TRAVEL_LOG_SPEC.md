@@ -75,16 +75,16 @@ Current shape:
 ```js
 {
   id: 'yunnan-2026',
-  title: '云岭之间',
+  title: '香格里拉',
   dates: '2026.09.25—09.30',
-  start: '2026-09-25T11:35:00+08:00',
+  start: '2026-09-25T09:06:00+08:00',
   end: '2026-10-01T00:00:00+08:00',
   path: '2026/yunnan/',
-  image: '2026/yunnan/poster.jpg',
+  image: '2026/yunnan/poster-v2.jpg',
   summary: '...',
   people: '1 人独行',
   type: '摄影行程',
-  note: '9 月 25 日 11:35 从广州出发'
+  note: '9 月 25 日 09:06 从科韵路出发'
 }
 ```
 

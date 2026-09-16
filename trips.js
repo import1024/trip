@@ -5,16 +5,16 @@ window.TRIPS = [
   {id:'hanoi-2026',title:'红河以北',dates:'2026.04.03—04.07',start:'2026-04-03T00:00:00+07:00',end:'2026-04-08T00:00:00+07:00',path:'2026/hanoi/',image:'2026/hanoi/poster.jpg',summary:'河内 · 老城的街巷、红河的日落，和一杯慢慢喝的咖啡。四人吃喝拍照攻略归档。',people:'4 人同行',type:'攻略归档',note:'2026 年 4 月的出行计划'},
   {
     id: 'yunnan-2026',
-    title: '云岭之间',
+    title: '香格里拉',
     dates: '2026.09.25—09.30',
-    start: '2026-09-25T11:35:00+08:00',
+    start: '2026-09-25T09:06:00+08:00',
     end: '2026-10-01T00:00:00+08:00',
     path: '2026/yunnan/',
-    image: '2026/yunnan/poster.jpg',
+    image: '2026/yunnan/poster-v2.jpg',
     summary: '丽江 · 虎跳峡 · 香格里拉。从古城屋顶到峡谷高路，再进入高原湿地与雪山之间。',
     people: '1 人独行',
     type: '摄影行程',
-    note: '9 月 25 日 11:35 从广州出发'
+    note: '9 月 25 日 09:06 从科韵路出发'
   },
   {
     id: 'indonesia-2026',
