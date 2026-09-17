@@ -192,6 +192,44 @@ Requirements:
 - The page must say that the schedule is plan-based and does not automatically sync live flight/ship status unless a real data source is added.
 - Do not create fake “real time” by inventing data.
 
+### 5.4 Journey record / photo essay
+
+Reference: `stories/2026/guiyang/`.
+
+Use for post-trip writing, photographs, observations, and memories. A record is separate from its corresponding plan and normally lives under `stories/YYYY/<slug>/`.
+
+Two source modes are supported:
+
+- **Collaborative creation**: the user supplies facts, memories, rough notes, captions, and/or photographs; the text and structure are developed together. Editorial help may improve pacing and clarity, but must not manufacture experiences or flatten the user's voice.
+- **External-platform migration**: the user supplies an existing post (HTML, Markdown, text export, or saved webpage) and original photographs. Treat the published post as the narrative/order source and the photograph archives as the asset source. Use references, attachment blocks, metadata, or other deterministic evidence to map placements; filenames need not already match.
+
+Material intake should establish, when available:
+
+- editorial title and destination
+- trip date/year and relationship to an existing plan
+- narrative source or working notes
+- original photographs, which may arrive in multiple archives
+- original publication URL and whether it should be linked
+- any requested omissions, privacy constraints, or people who should not be shown
+
+Migration and media rules:
+
+- Preserve narrative sequence and photograph placement order.
+- Preserve intentional repeated placements while storing only one optimized underlying asset.
+- Do not silently reorder photographs by filename, capture time, or aesthetic preference when the source already defines order.
+- Optimize for web delivery while retaining the original crop, tone, and visual character unless the user requests re-editing.
+- Use meaningful dimensions, lazy loading below the first meaningful image, and direct asset paths that work on GitHub Pages.
+- Prefer no-crop editorial composition. Same-orientation photographs may share a row. Mixed landscape/portrait sequences should normally break at the orientation change: landscape images remain wide; single portrait images are narrower and centered. Avoid one-sided empty areas and avoid `object-fit: cover` merely to force equal boxes.
+- Keep mobile and desktop layouts first-class; a dense desktop grid may become a simpler phone sequence.
+- Record the original source link and an archive/provenance note when migrating another publication.
+
+Publishing requirements:
+
+- Add/update exactly one `stories.js` entry.
+- Update the `stories/` collection and homepage fallback/discovery paths.
+- Cross-link plan and record when a plan exists.
+- Verify narrative order, placement count, unique asset count, missing assets, repeated references, direct URLs, sharing, and responsive composition.
+
 ## 6. Shared visual identity
 
 The site should be consistent without making every journey look identical.
@@ -362,6 +400,19 @@ When asked to publish a trip:
 11. Check phone and desktop layout.
 12. Check JS-disabled readability for essential content.
 13. Commit to `main` (GitHub Pages deploys from `main` root) unless the user requests a branch/PR.
+
+### Journey-record workflow
+
+When the destination is `stories/`:
+
+1. Determine whether the source is collaborative creation or external migration.
+2. Inventory narrative sources, photograph archives, source links, dates, and any privacy/omission requirements.
+3. Build a deterministic placement map before renaming or optimizing assets. When an exported post contains attachment references, prefer those references over perceptual guessing.
+4. Draft or migrate the narrative without inventing completed-trip facts.
+5. Create/update `stories/YYYY/<slug>/`, `stories.js`, the record collection, homepage fallback, and plan cross-links.
+6. Optimize photographs, preserve repeated placements, and apply orientation-aware editorial grouping without cropping by default.
+7. Validate text order, photograph placement count, unique asset count, missing paths, lazy loading, direct URLs, mobile/desktop layout, and sharing.
+8. Commit to `main` unless the user requests a branch/PR.
 
 ## 15. Pre-commit checklist
 

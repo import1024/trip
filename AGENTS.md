@@ -41,13 +41,24 @@ Default workflow:
 
 ## Publishing a journey record
 
-1. Create or update `stories/YYYY/<slug>/` and keep the original trip plan intact.
-2. Preserve the user's supplied narrative and photo order; do not infer visits that are not in the source.
-3. Add or update exactly one entry in `window.STORIES` in `stories.js`.
-4. Update the homepage no-JavaScript fallback and the `stories/` collection page.
-5. Link the record and its corresponding plan in both directions when a plan exists.
-6. Optimize local photos for the web without silently replacing or re-editing their visual character.
-7. Run the same direct-link, responsive, accessibility, sharing, and deployment checks as for a plan.
+When the user says "发游记", "发布游记", "发布旅途记录", "迁移游记", or equivalent, interpret it as an execution request to publish/update a **旅途记录** under `stories/` when repository write access is available.
+
+Journey records may enter through either workflow:
+
+- **Collaborative creation**: work with the user from notes, facts, memories, captions, and photographs. Help structure and edit the piece, but keep factual claims grounded in supplied material and preserve the user's voice.
+- **External-platform migration**: import an already-published HTML/Markdown/text post plus its original photographs. Preserve narrative order, photo placement order, intentional repeated references, and the original source link when available. Photo filenames do not need to match the post if references or attachment metadata can establish the mapping.
+
+Default workflow:
+
+1. Identify the source mode and collect the minimum viable materials: title/destination, date or year, narrative or notes, photographs, and any existing plan/source URL. Archives may be split across several files.
+2. Create or update `stories/YYYY/<slug>/` and keep the original trip plan intact.
+3. Preserve supplied facts, narrative order, photograph order, and intentional duplicate placements. Do not infer visits or experiences absent from the source.
+4. Optimize local photographs for web delivery without silently re-editing their visual character. Reuse one optimized asset for repeated placements.
+5. Prefer uncropped editorial layouts. Group photographs with the same orientation; when landscape and portrait images would create a large one-sided void, break the sequence into separate rows, keep landscape images wide, and center portrait images at a narrower width.
+6. Add or update exactly one entry in `window.STORIES` in `stories.js`.
+7. Update the homepage no-JavaScript fallback and the `stories/` collection page.
+8. Link the record and its corresponding plan in both directions when a plan exists. Link the original external publication when migration provenance matters.
+9. Run direct-link, responsive, accessibility, sharing, asset-integrity, and deployment checks. Verify placement count, unique asset count, missing files, and mobile/desktop composition.
 
 ## Plan vs. journey record
 
