@@ -124,6 +124,8 @@ main { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
   margin: clamp(36px, 5vw, 72px) 0;
 }
 .photo-grid.count-1 { grid-template-columns: minmax(0, 960px); justify-content: center; }
+.photo-grid.count-1.orientation-portrait { grid-template-columns: minmax(0, 640px); }
+.photo-grid.count-1.orientation-square { grid-template-columns: minmax(0, 760px); }
 .photo-grid.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .photo-grid.count-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 figure { margin: 0; }
