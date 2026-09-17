@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a2e22">
+<title>洋芋王国 · 贵阳 · Redback 旅行日志</title>
+<meta name="description" content="2026年5月1日至5日，三人贵阳五日 City Walk 计划归档：黔灵山、老巷咖啡、东山夕照、甲秀楼与日咖夜酒。">
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg?v=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14261c;
+    --ink-soft: #2a3d30;
+    --moss: #3a5a44;
+    --bamboo: #7a9b6e;
+    --bamboo-bright: #a8c49a;
+    --paper: #f4ede0;
+    --paper-warm: #ebe0cb;
+    --paper-deep: #ddc9a8;
+    --chili: #e04a26;
+    --chili-deep: #8f2a14;
+    --gold: #d4a149;
+    --gold-bright: #e8bc65;
+    --mist: rgba(20, 38, 28, 0.08);
+    --shadow-soft: 0 2px 20px rgba(20, 38, 28, 0.08);
+    --shadow-card: 0 4px 30px rgba(20, 38, 28, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Noto Sans SC", -apple-system, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.75;
+    overflow-x: hidden;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(184, 137, 58, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 60%, rgba(58, 90, 68, 0.05) 0%, transparent 40%);
+    z-index: 1;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.15 0 0 0 0 0.11 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.3;
+    mix-blend-mode: multiply;
+    z-index: 2;
+  }
+
+  .wrap { position: relative; z-index: 3; max-width: 480px; margin: 0 auto; }
+
+  /* ====== 封面 ====== */
+  .cover {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(165deg, #0f1f18 0%, #1a2e22 45%, #243a2c 100%);
+    color: var(--paper);
+    padding: 60px 28px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    right: -30%;
+    width: 140%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(232, 188, 101, 0.18) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .mountains {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  .cover-meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: rgba(244, 237, 224, 0.75);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-meta .stamp {
+    padding: 4px 10px;
+    border: 1px solid rgba(244, 237, 224, 0.4);
+    border-radius: 2px;
+    color: var(--paper);
+  }
+
+  .cover-title {
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cover-tag {
+    display: inline-block;
+    font-family: "Noto Serif SC", serif;
+    font-size: 13px;
+    letter-spacing: 0.4em;
+    color: var(--gold-bright);
+    padding-left: 32px;
+    position: relative;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .cover-tag::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 24px;
+    height: 1px;
+    background: var(--gold-bright);
+  }
+
+  h1.cover-h1 {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: #fdf8ec;
+    margin-bottom: 4px;
+  }
+
+  h1.cover-h1 .accent {
+    color: var(--chili);
+    font-style: italic;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+  }
+
+  .cover-sub {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 28px;
+    color: #f0e5ce;
+    margin-top: 8px;
+  }
+
+  .cover-info {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(244, 237, 224, 0.3);
+    padding-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .info-item {
+    font-size: 12px;
+  }
+
+  .info-label {
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 4px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .info-val {
+    font-family: "Noto Serif SC", serif;
+    color: #fdf8ec;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  /* ====== 目录 ====== */
+  .toc {
+    padding: 48px 28px;
+    background: var(--paper);
+  }
+
+  .section-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--chili);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-family: "Noto Serif SC", serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 32px;
+    line-height: 1.1;
+  }
+
+  .section-title .italic {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--moss);
+  }
+
+  .toc-list { list-style: none; }
+
+  .toc-item {
+    display: flex;
+    align-items: baseline;
+    padding: 16px 0;
+    border-top: 1px solid var(--mist);
+    cursor: pointer;
+    transition: padding-left 0.3s ease, background 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .toc-item:last-child { border-bottom: 1px solid var(--mist); }
+  .toc-item:hover, .toc-item:active { padding-left: 8px; background: rgba(224, 74, 38, 0.04); }
+
+  .toc-num {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--chili);
+    line-height: 1;
+    margin-right: 16px;
+    min-width: 50px;
+  }
+
+  .toc-text { flex: 1; }
+
+  .toc-day {
+    font-family: "Noto Serif SC", serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .toc-desc {
+    font-size: 12px;
+    color: var(--ink-soft);
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+  }
+
+  .toc-arrow {
+    color: var(--moss);
+    font-size: 20px;
+    margin-left: 8px;
+  }
+
+  /* ====== Day 章节 ====== */
+  .day {
+    padding: 56px 28px 40px;
+    position: relative;
+  }
+
+  .day-odd { background: var(--paper); }
+  .day-even { background: var(--paper-warm); }
+
+  .day-header {
+    margin-bottom: 36px;
+    position: relative;
+  }
+
+  .day-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--chili);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+
+  .day-label::before {
+    content: "";
+    width: 16px;
+    height: 1px;
+    background: var(--chili);
+  }
+
+  .day-title {
+    font-family: "Noto Serif SC", serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+
+  .day-title .big {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--moss);
+    vertical-align: -8px;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 0.8;
+  }
+
+  .day-desc {
+    font-family: "Noto Serif SC", serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.6;
+    padding-left: 16px;
+    border-left: 2px solid var(--bamboo);
+    margin-top: 14px;
+  }
+
+  /* ====== 时间线 ====== */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--bamboo) 0%, var(--bamboo) 70%, transparent 100%);
+    opacity: 0.6;
+  }
+
+  .tl-item {
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--moss);
+    z-index: 2;
+  }
+
+  .day-even .tl-item::before { background: var(--paper-warm); }
+
+  .tl-item.highlight::before {
+    background: var(--chili);
+    border-color: var(--chili);
+    box-shadow: 0 0 0 4px rgba(224, 74, 38, 0.18);
+  }
+
+  .tl-time {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--moss);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .tl-place {
+    font-family: "Noto Serif SC", serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .tl-place .zh-accent {
+    color: var(--chili);
+  }
+
+  .tl-body {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .tl-body p { margin-bottom: 8px; }
+  .tl-body p:last-child { margin-bottom: 0; }
+
+  strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 3px 9px;
+    background: transparent;
+    border: 1px solid var(--bamboo);
+    color: var(--moss);
+    border-radius: 2px;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 500;
+  }
+
+  .tag.hot { border-color: var(--chili); color: var(--chili); background: rgba(224, 74, 38, 0.06); }
+  .tag.eat { border-color: #a37524; color: #a37524; background: rgba(163, 117, 36, 0.06); }
+
+  /* ====== 特色卡片 - 改为浅色以提高可读性 ====== */
+  .feature-card {
+    background: linear-gradient(155deg, #fdf8ec 0%, #f4ede0 100%);
+    color: var(--ink);
+    padding: 22px 22px 24px;
+    margin: 24px 0;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(20, 38, 28, 0.06);
+    border-left: 4px solid var(--gold);
+  }
+
+  .feature-card::before {
+    content: "★";
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    font-size: 22px;
+    color: var(--gold);
+  }
+
+  .feature-label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: #a37524;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .feature-title {
+    font-family: "Noto Serif SC", serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+
+  .feature-body {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  .feature-body strong {
+    color: var(--chili);
+    font-weight: 700;
+  }
+
+  /* ====== Tips 章节 - 浅色版本 ====== */
+  .tips {
+    padding: 56px 28px;
+    background: var(--paper-warm);
+    color: var(--ink);
+    position: relative;
+  }
+
+  .tips .section-title { color: var(--ink); }
+  .tips .section-label { color: var(--chili); }
+  .tips .section-title .italic { color: var(--moss); }
+
+  .tip-card {
+    background: #fdf8ec;
+    border: 1px solid rgba(20, 38, 28, 0.08);
+    padding: 22px 22px 24px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(20, 38, 28, 0.05);
+  }
+
+  .tip-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 28px;
+    height: 2px;
+    background: var(--chili);
+  }
+
+  .tip-title {
+    font-family: "Noto Serif SC", serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--ink);
+    padding-top: 10px;
+  }
+
+  .tip-body {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  .tip-body strong {
+    color: var(--chili);
+    font-weight: 700;
+  }
+
+  /* 收尾 - 浅色版 */
+  .footer {
+    background: var(--ink);
+    color: #fdf8ec;
+    padding: 36px 28px 48px;
+    text-align: center;
+  }
+
+  .footer-seal {
+    font-family: "Noto Serif SC", serif;
+    font-size: 14px;
+    color: var(--gold-bright);
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  .footer-quote {
+    font-family: "DM Serif Display", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #e8dcc2;
+    line-height: 1.6;
+  }
+
+  /* 回到顶部 */
+  .top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: var(--shadow-card);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    cursor: pointer;
+  }
+
+  .top-btn.visible { opacity: 0.9; pointer-events: auto; }
+
+  /* 进度条 */
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--chili);
+    width: 0;
+    z-index: 200;
+    transition: width 0.1s;
+  }
+
+  /* 波纹点缀 */
+  .ornament {
+    text-align: center;
+    margin: 24px 0;
+    font-family: "Noto Serif SC", serif;
+    color: var(--bamboo);
+    letter-spacing: 1em;
+    opacity: 0.5;
+    font-size: 14px;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .cover-tag, h1.cover-h1, .cover-sub, .cover-info {
+    animation: fadeUp 0.8s ease-out forwards;
+    animation-delay: calc(var(--d, 0) * 150ms);
+    opacity: 0;
+  }
+
+  h1.cover-h1 { --d: 1; }
+  .cover-sub { --d: 2; }
+  .cover-info { --d: 3; }
+
+  /* ============================================
+     平板 & 桌面端自适应
+     ============================================ */
+
+  @media (min-width: 768px) {
+    body { font-size: 16px; }
+
+    .wrap { max-width: 720px; }
+
+    .cover { padding: 80px 56px 60px; }
+    h1.cover-h1 { font-size: 88px; }
+    .cover-sub { font-size: 34px; }
+    .cover-info { grid-template-columns: repeat(4, 1fr); }
+
+    .toc { padding: 72px 56px; }
+    .section-title { font-size: 40px; }
+
+    .day { padding: 80px 56px 60px; }
+    .day-title { font-size: 34px; }
+    .day-title .big { font-size: 72px; }
+
+    .timeline { padding-left: 36px; }
+    .tl-item::before { left: -36px; }
+    .tl-place { font-size: 20px; }
+    .tl-body { font-size: 15px; }
+
+    .tips { padding: 80px 56px; }
+
+    .footer { padding: 48px 56px 64px; }
+  }
+
+  @media (min-width: 1024px) {
+    body { font-size: 16px; }
+
+    .wrap { max-width: 1200px; }
+
+    .cover {
+      min-height: 85vh;
+      padding: 100px 80px 80px;
+    }
+
+    h1.cover-h1 { font-size: 120px; }
+    .cover-sub { font-size: 42px; }
+
+    .cover-title { max-width: 700px; }
+
+    .toc { padding: 100px 80px; }
+    .section-title { font-size: 52px; margin-bottom: 48px; }
+
+    .toc-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 48px;
+    }
+
+    .toc-item {
+      padding: 20px 0;
+    }
+
+    .toc-num { font-size: 44px; }
+    .toc-day { font-size: 19px; }
+    .toc-desc { font-size: 13px; }
+
+    /* Day 双栏:左侧标题固定,右侧内容滚动 */
+    .day {
+      padding: 100px 80px 80px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .day-header {
+      position: sticky;
+      top: 40px;
+      margin-bottom: 0;
+    }
+
+    .day-title { font-size: 38px; }
+    .day-title .big { font-size: 80px; }
+
+    .day-content { min-width: 0; }
+
+    .timeline { padding-left: 40px; }
+    .tl-item::before { left: -40px; width: 16px; height: 16px; }
+    .tl-item { margin-bottom: 36px; }
+
+    .tl-place { font-size: 22px; }
+    .tl-body { font-size: 15px; line-height: 1.8; }
+
+    .feature-card { padding: 28px 32px 32px; }
+    .feature-title { font-size: 24px; }
+    .feature-body { font-size: 14.5px; }
+
+    .ornament { display: none; }
+
+    /* Tips 双栏 */
+    .tips { padding: 100px 80px; }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .tip-card { margin-bottom: 0; }
+
+    .footer { padding: 60px 80px 80px; }
+    .footer-quote { font-size: 20px; }
+  }
+
+  @media (min-width: 1400px) {
+    .wrap { max-width: 1360px; }
+    h1.cover-h1 { font-size: 140px; }
+  }
+
+  /* Redback travel-log shell */
+  .journal-nav {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background: var(--paper);
+  }
+  .journal-nav a { color: var(--ink); text-decoration: none; font-weight: 600; }
+  .share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border: 1px solid rgba(20, 38, 28, 0.18);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .archive-shell {
+    padding: 44px 28px;
+    background: #e8decb;
+    display: grid;
+    gap: 26px;
+  }
+  .archive-note {
+    border-left: 3px solid var(--chili);
+    padding: 16px 18px;
+    background: rgba(253, 248, 236, 0.72);
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  .archive-note p { margin: 0; }
+  .archive-note a { display: inline-block; margin-top: 8px; color: var(--chili-deep); font-weight: 600; }
+  .poster-feature {
+    display: grid;
+    grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+    align-items: center;
+    gap: 24px;
+  }
+  .poster-link { color: inherit; text-decoration: none; }
+  .poster-link img { display: block; width: 100%; height: auto; border-radius: 4px; box-shadow: var(--shadow-card); }
+  .poster-link span { display: block; margin-top: 8px; color: var(--chili-deep); font-size: 13px; }
+  .poster-copy h2 { font-family: "Noto Serif SC", serif; font-size: 30px; line-height: 1.25; margin-bottom: 10px; }
+  .poster-copy p { color: var(--ink-soft); }
+  .trip-footer { padding: 36px 24px 52px; text-align: center; background: var(--paper); color: var(--ink-soft); font-size: 14px; }
+  .trip-footer a { color: var(--chili-deep); text-decoration: none; }
+  #toast {
+    position: fixed;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    z-index: 30;
+    max-width: 90vw;
+    display: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: var(--ink);
+    color: #fff;
+  }
+  @media (min-width: 760px) {
+    .archive-shell { grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr); align-items: center; padding: 54px 64px; }
+    .poster-feature { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .journal-nav { padding: 14px 18px; font-size: 14px; }
+    .share-button { padding: 8px 10px; }
+    .archive-shell { padding: 34px 22px; }
+    .poster-feature { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
+    .poster-copy h2 { font-size: 23px; }
+    .poster-copy p { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="journal-nav" aria-label="旅行日志">
+  <a href="../../">← Redback · 旅行日志</a>
+  <button id="share" class="share-button" type="button" aria-label="分享行程">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg>
+    分享行程
+  </button>
+</nav>
+
+<div class="progress" id="progress"></div>
+
+<div class="wrap">
+
+<!-- ====== 封面 ====== -->
+<section class="cover">
+  <div class="cover-meta">
+    <span>GUIYANG · 黔</span>
+    <span class="stamp">MAY 2026</span>
+  </div>
+
+  <div class="cover-title">
+    <div class="cover-tag">五 日 城 市 漫 游</div>
+    <h1 class="cover-h1">
+      洋芋<br>
+      <span class="accent">王国.</span>
+    </h1>
+    <div class="cover-sub">a Guiyang City Walk Journal</div>
+  </div>
+
+  <div class="cover-info">
+    <div class="info-item">
+      <div class="info-label">Dates</div>
+      <div class="info-val">5.1 → 5.5</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Base</div>
+      <div class="info-val">喷水池</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Travelers</div>
+      <div class="info-val">3 人</div>
+    </div>
+    <div class="info-item">
+      <div class="info-label">Mode</div>
+      <div class="info-val">City Walk</div>
+    </div>
+  </div>
+
+  <svg class="mountains" viewBox="0 0 400 180" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,180 L0,120 L40,90 L80,110 L120,70 L160,95 L200,55 L240,80 L280,60 L320,85 L360,50 L400,75 L400,180 Z" fill="#7a9b6e" opacity="0.4"/>
+    <path d="M0,180 L0,140 L50,115 L100,130 L150,105 L200,125 L250,100 L300,120 L350,95 L400,115 L400,180 Z" fill="#3a5a44" opacity="0.6"/>
+    <path d="M0,180 L0,160 L60,145 L120,155 L180,140 L240,150 L300,135 L360,148 L400,140 L400,180 Z" fill="#0f1f18" opacity="0.85"/>
+  </svg>
+</section>
+
+<section class="archive-shell" aria-label="攻略归档说明">
+  <div class="archive-note">
+    <p><strong>已归档 · 2026 年 5 月的出行计划</strong><br>按五一前制定的网页版攻略保留路线、店铺与参考信息，不代表每一项都实际到访；营业时间、活动与交通信息未重新核验。</p>
+    <a href="original.html" download="洋芋王国-贵阳原始攻略.html">下载当时的原攻略 ↓</a>
+  </div>
+  <div class="poster-feature">
+    <a class="poster-link" href="poster.jpg" target="_blank" rel="noopener">
+      <img src="poster.jpg" width="1122" height="1402" alt="洋芋王国：贵阳山城、老街与洋芋摊旅行海报" fetchpriority="high">
+      <span>查看旅行海报 ↗</span>
+    </a>
+    <div class="poster-copy">
+      <div class="section-label">GUIYANG · 2026</div>
+      <h2>山城、老巷，<br>以及一切洋芋。</h2>
+      <p>以喷水池为据点，五天走过黔灵山、东山寺、甲秀楼与城市巷弄，也把酸汤、咖啡和夜晚的精酿排进行程。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== 目录 ====== -->
+<section class="toc" id="toc">
+  <div class="section-label">Contents · 目录</div>
+  <h2 class="section-title">五日<span class="italic">行程</span></h2>
+
+  <div class="toc-list">
+    <a href="#day1" class="toc-item">
+      <span class="toc-num">01</span>
+      <div class="toc-text">
+        <div class="toc-day">抵达 · 黔灵漫步</div>
+        <div class="toc-desc">5.1 · 喷水池 — 黔灵山 — 天主教堂</div>
+      </div>
+      <span class="toc-arrow">→</span>
+    </a>
+    <a href="#day2" class="toc-item">
+      <span class="toc-num">02</span>
+      <div class="toc-text">
+        <div class="toc-day">老巷咖啡 · 东山夕照</div>
+        <div class="toc-desc">5.2 · 蔡家街 — 太平路 — 东山寺</div>
+      </div>
+      <span class="toc-arrow">→</span>
+    </a>
+    <a href="#day3" class="toc-item">
+      <span class="toc-num">03</span>
+      <div class="toc-text">
+        <div class="toc-day">甲秀楼影 · 南明河畔</div>
+        <div class="toc-desc">5.3 · 甲秀楼 — 翠微巷 — 省府路</div>
+      </div>
+      <span class="toc-arrow">→</span>
+    </a>
+    <a href="#day4" class="toc-item">
+      <span class="toc-num">04</span>
+      <div class="toc-text">
+        <div class="toc-day">林间深呼吸 · 日咖夜酒</div>
+        <div class="toc-desc">5.4 · 鹿冲关 — 电力巷 — 太平路</div>
+      </div>
+      <span class="toc-arrow">→</span>
+    </a>
+    <a href="#day5" class="toc-item">
+      <span class="toc-num">05</span>
+      <div class="toc-text">
+        <div class="toc-day">收尾 · 烟火早市</div>
+        <div class="toc-desc">5.5 · 护国路 — 喷水池 — 返程</div>
+      </div>
+      <span class="toc-arrow">→</span>
+    </a>
+    <a href="#tips" class="toc-item">
+      <span class="toc-num"><em>·</em></span>
+      <div class="toc-text">
+        <div class="toc-day">实用贴士</div>
+        <div class="toc-desc">辣度 · 折耳根 · 咖啡地图</div>
+      </div>
+      <span class="toc-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- ====== Day 1 ====== -->
+<section class="day day-odd" id="day1">
+  <div class="day-header">
+    <div class="day-label">Day One · 五月一日</div>
+    <h2 class="day-title"><span class="big">01</span>抵达日 · 黔灵漫步</h2>
+    <p class="day-desc">大交通日,轻量启程。老城西北最大的自然山体公园作为开场,野生猴群与老城俯瞰,不疾不徐地进入贵阳节奏。</p>
+  </div>
+
+  <div class="day-content">
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-time">抵达 · ARRIVAL</div>
+      <div class="tl-place">贵阳北站 → 喷水池</div>
+      <div class="tl-body">
+        <p>地铁 <strong>1 号线</strong>直达喷水池站,约 25 分钟 / 6 元。五一北站打车队会很长,地铁比车还快。</p>
+        <div class="tag-row">
+          <span class="tag">地铁直达</span>
+          <span class="tag">¥6</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">14:00 – 17:30 · 下午</div>
+      <div class="tl-place">黔灵山公园</div>
+      <div class="tl-body">
+        <p>喷水池打车 10 分钟。市中心最大山体公园,<strong>免费</strong>,国内唯一免费大熊猫馆。</p>
+        <p>往 <strong>七星潭、瞰筑亭</strong>方向走,能甩开大部分游客。坐索道上山俯瞰贵阳老城,非常辽阔。</p>
+        <p>⚠️ 看好手里塑料袋——野生猕猴会抢。</p>
+        <div class="tag-row">
+          <span class="tag">自然</span>
+          <span class="tag">观景高点</span>
+          <span class="tag hot">必打卡</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">17:30 – 18:30 · 傍晚</div>
+      <div class="tl-place">贵阳北天主教堂</div>
+      <div class="tl-body">
+        <p>中西合璧,一边中式塔、一边西式拱门,<strong>立面非常出片</strong>,游客稀少。回喷水池顺路不绕。</p>
+        <div class="tag-row">
+          <span class="tag">人文</span>
+          <span class="tag">拍照</span>
+          <span class="tag">小众</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">19:00 · 晚餐</div>
+      <div class="tl-place"><span class="zh-accent">老凯俚</span>酸汤鱼</div>
+      <div class="tl-body">
+        <p>贵州菜开篇必点 <strong>红酸汤鱼</strong>——联合国非遗美食,毛辣果发酵的酸汤是贵州的灵魂。</p>
+        <p>3 人点一锅酸汤鱼足够,配油炸洋芋、折耳根蘸水。</p>
+        <div class="tag-row">
+          <span class="tag eat">红酸汤</span>
+          <span class="tag eat">非遗</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="ornament">— ◆ —</div>
+</section>
+
+<!-- ====== Day 2 ====== -->
+<section class="day day-even" id="day2">
+  <div class="day-header">
+    <div class="day-label">Day Two · 五月二日</div>
+    <h2 class="day-title"><span class="big">02</span>老巷咖啡 · 东山夕照</h2>
+    <p class="day-desc">精华一天。从青石板老街晨起,到冠军咖啡午后,再到东山寺落日与青云市集烟火,一整天的情绪是从沉到烈。</p>
+  </div>
+
+  <div class="day-content">
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-time">08:30 · 早餐</div>
+      <div class="tl-place">金牌罗记肠旺面</div>
+      <div class="tl-body">
+        <p>蔡家街早点一条街。<strong>肠旺面</strong>=肥肠+血旺+竹升面,贵阳人从小吃到大的味道。感受本地早市氛围。</p>
+        <div class="tag-row">
+          <span class="tag eat">老字号</span>
+          <span class="tag">本地</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">09:30 – 12:00 · 上午</div>
+      <div class="tl-place">电台街 &amp; 蔡家街</div>
+      <div class="tl-body">
+        <p><strong>600 年青石板老路</strong>,梧桐、老理发店、裁缝铺。citywalk 随便拐小巷都能出片。</p>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-label">★ COFFEE HIGHLIGHT</div>
+      <div class="feature-title">黑石咖啡馆</div>
+      <div class="feature-body">一整面墙挂着 <strong>28 张咖啡赛事获奖证书</strong>,贵阳精品咖啡代表之一。SOE 手冲推荐。蔡家街步行可达。</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">12:30 · 午餐</div>
+      <div class="tl-place"><span class="zh-accent">丝恋</span>红汤丝娃娃</div>
+      <div class="tl-body">
+        <p><strong>丝娃娃</strong>是贵阳最代表小吃——薄面皮包十几种蔬菜丝浇酸辣汁,像襁褓里的婴儿,可以 DIY,很有趣。</p>
+        <div class="tag-row">
+          <span class="tag eat">代表小吃</span>
+          <span class="tag">DIY</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">14:00 – 16:30 · 下午</div>
+      <div class="tl-place">文昌阁 &amp; 太平路</div>
+      <div class="tl-body">
+        <p>文昌阁——贵阳九门四阁唯一留存,明代 400 多年,免费,10 分钟看完。</p>
+        <p><strong>太平路</strong>:120+ 店铺,"朝咖夜酒"青年文化街区。下午错峰去人少。</p>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-label">★ 世界冠军咖啡</div>
+      <div class="feature-title">乔治队长 Captain George</div>
+      <div class="feature-body">店主彭近洋是 <strong>2025 世界咖啡冲煮大赛冠军</strong>。游客有人排一小时只为一杯"冠军味",下午错峰能喝上。太平路店。</div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">17:30 – 19:30 · 日落</div>
+      <div class="tl-place"><span class="zh-accent">东山寺</span> · 最美日落</div>
+      <div class="tl-body">
+        <p>太平路打车 8 分钟。徒步上山 20–30 分钟,山顶俯瞰整个老城+南明河+甲秀楼。</p>
+        <p>5 月贵阳日落约 <strong>19:30</strong>,落日前后 20 分钟是<strong>蓝调时刻</strong>,拍完夕阳等亮灯,夜景层次更丰富。</p>
+        <div class="tag-row">
+          <span class="tag hot">日落必打卡</span>
+          <span class="tag">夜景</span>
+          <span class="tag">高点</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">20:30+ · 夜宵</div>
+      <div class="tl-place">青云市集</div>
+      <div class="tl-body">
+        <p>原贵阳针织厂改造,<strong>红砖墙工业风 + 国潮灯牌</strong>,贵阳夜市顶流。</p>
+        <p><strong>必吃</strong>:但家香酥鸭 · 雷家豆腐圆子(蜂窝豆腐灌折耳根蘸水)· 乖丸子冰浆 · 烙锅 · 烤小豆腐 · 折耳根柠檬茶(猎奇向)</p>
+        <p>⚠️ 五一晚上人非常多,建议逛外围,每样点一小份多尝试。</p>
+        <div class="tag-row">
+          <span class="tag eat">夜市顶流</span>
+          <span class="tag hot">人多</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="ornament">— ◆ —</div>
+</section>
+
+<!-- ====== Day 3 ====== -->
+<section class="day day-odd" id="day3">
+  <div class="day-header">
+    <div class="day-label">Day Three · 五月三日</div>
+    <h2 class="day-title"><span class="big">03</span>甲秀楼影 · 南明河畔</h2>
+    <p class="day-desc">南线路线。人文地标 + 江南园林 + 社区咖啡馆,沿南明河走回甲秀楼夜景收尾,完全不走回头路。</p>
+  </div>
+
+  <div class="day-content">
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-time">09:00 · 早餐</div>
+      <div class="tl-place">护国路老字号</div>
+      <div class="tl-body">
+        <p><strong>南门口肠旺面 · 安顺小舒冰浆 · 李兰英湖南面</strong>。老字号扎堆,多尝几样。</p>
+        <div class="tag-row">
+          <span class="tag eat">老字号</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">10:00 – 12:00 · 上午</div>
+      <div class="tl-place"><span class="zh-accent">甲秀楼</span> &amp; 翠微园</div>
+      <div class="tl-body">
+        <p>贵阳城市地标,400 多年楼阁立在南明河鳌矶石上,免费进。</p>
+        <p>翠微园(周二–周日 9:00–17:00)是江南园林风格,<strong>拍旗袍/国风非常合适</strong>。</p>
+        <div class="tag-row">
+          <span class="tag">城市地标</span>
+          <span class="tag">国风拍照</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">12:00 · 彩蛋</div>
+      <div class="tl-place">翠微巷</div>
+      <div class="tl-body">
+        <p>从翠微园侧门出来就是 300 米老巷,明宣德年间翠微阁藏身其中,游客比主景区少很多。<strong>探索型目的地</strong>。</p>
+        <div class="tag-row">
+          <span class="tag">小众</span>
+          <span class="tag">探索</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">12:30 · 午餐</div>
+      <div class="tl-place">贵厨<span class="zh-accent">酸汤牛肉</span></div>
+      <div class="tl-body">
+        <p>和 Day1 酸汤鱼做差异化——<strong>酸汤牛肉更醇厚</strong>,汤底可以煮菜煮粉。小十字店。</p>
+        <div class="tag-row">
+          <span class="tag eat">酸汤</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">14:30 – 17:30 · 下午</div>
+      <div class="tl-place">省府路 · 石老小区</div>
+      <div class="tl-body">
+        <p>社区咖啡馆聚集区。<strong>Combos 咖啡馆</strong>藏在石老小区里,本地人首创社区咖啡,氛围松弛,不挤。</p>
+        <p>这一片<strong>咖啡主理人密度被夸"比上海还高"</strong>,喜欢探索可以慢慢串门。</p>
+        <div class="tag-row">
+          <span class="tag">社区咖啡</span>
+          <span class="tag">探索</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">18:00 – 19:30 · 傍晚</div>
+      <div class="tl-place">筑城广场 + 南明河</div>
+      <div class="tl-body">
+        <p>沿河走到筑城广场,四座苗族<strong>巨型铜制芦笙雕塑</strong>,壮观。</p>
+        <p>五一期间"<strong>路边音乐会</strong>"在筑城广场连唱 5 天,免费听。</p>
+        <p>这时候回头看甲秀楼——亮灯后倒映南明河,比白天震撼 10 倍。</p>
+        <div class="tag-row">
+          <span class="tag">夜景</span>
+          <span class="tag">免费音乐会</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="ornament">— ◆ —</div>
+</section>
+
+<!-- ====== Day 4 ====== -->
+<section class="day day-even" id="day4">
+  <div class="day-header">
+    <div class="day-label">Day Four · 五月四日</div>
+    <h2 class="day-title"><span class="big">04</span>林间深呼吸 · 日咖夜酒</h2>
+    <p class="day-desc">放慢节奏。北线森林氧吧 + 探索型巷子 + 精酿之夜,"日咖夜酒"全貌体验。</p>
+  </div>
+
+  <div class="day-content">
+  <div class="timeline">
+
+    <div class="tl-item highlight">
+      <div class="tl-time">10:00 – 13:00 · 上午</div>
+      <div class="tl-place">鹿冲关森林公园</div>
+      <div class="tl-body">
+        <p>喷水池打车 15 分钟。市区北面森林氧吧,<strong>2000+ 植物</strong>,比黔灵山小众很多,几乎没五一人流。</p>
+        <p><strong>纯探索目的地</strong>,不设路线,随走随发现。</p>
+        <p>拍照点:阳光斑驳的森林步道、红枫林(4–5 月嫩叶)、山顶俯瞰观山湖新城。</p>
+        <div class="tag-row">
+          <span class="tag">小众</span>
+          <span class="tag">自然</span>
+          <span class="tag">探索</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">13:30 · 午餐</div>
+      <div class="tl-place">丁姨妈<span class="zh-accent">烙锅</span></div>
+      <div class="tl-body">
+        <p><strong>烙锅</strong>是贵州美食江湖必体验——铁锅煎烙各种食材,蘸干辣椒面吃,贵州土法铁板烧。全林步行街(甲秀楼附近)。</p>
+        <div class="tag-row">
+          <span class="tag eat">烙锅</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-label">★ 彩蛋时段</div>
+      <div class="feature-title">电力巷 &amp; 余家巷</div>
+      <div class="feature-body">留给你们的探索彩蛋。电力巷原本无名,2019 年因 <strong>post-man 咖啡店</strong>走红,现在整条巷子都是风格小店。<strong>Trip Smith 精酿</strong>白天就开。走累了坐下喝一杯。</div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">15:00 – 18:00 · 下午</div>
+      <div class="tl-place">自由探索</div>
+      <div class="tl-body">
+        <p>这是整个行程里<strong>纯 citywalk 浓度最高</strong>的半天,不设路线。</p>
+      </div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">18:30+ · 夜晚</div>
+      <div class="tl-place">太平路精酿一条街</div>
+      <div class="tl-body">
+        <p>从 Trip Smith 出发,走到<strong>"小恶魔"精酿馆</strong>点一杯 <strong>"酸汤古斯"</strong>——用贵州酸汤做的古斯啤酒,世界绝无仅有。</p>
+        <p>十几辆精酿啤酒车沿街一字排开,露天小椅子,晚风凉爽。这就是贵阳<strong>"日咖夜酒"</strong>的精髓。</p>
+        <div class="tag-row">
+          <span class="tag hot">精酿</span>
+          <span class="tag">酸汤古斯</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="ornament">— ◆ —</div>
+</section>
+
+<!-- ====== Day 5 ====== -->
+<section class="day day-odd" id="day5">
+  <div class="day-header">
+    <div class="day-label">Day Five · 五月五日</div>
+    <h2 class="day-title"><span class="big">05</span>收尾 · 烟火早市</h2>
+    <p class="day-desc">轻松收尾,补漏前几日没吃到的。根据车次灵活调整。</p>
+  </div>
+
+  <div class="day-content">
+  <div class="timeline">
+
+    <div class="tl-item">
+      <div class="tl-time">早餐 + 上午</div>
+      <div class="tl-place">护国路 / 二七路扫尾</div>
+      <div class="tl-body">
+        <p>补漏清单:</p>
+        <p>▸ <strong>筑城大师肠旺面</strong>(大众点评必吃榜)<br>
+        ▸ <strong>洋芋粑</strong>(土豆饼配折耳根+干辣椒)<br>
+        ▸ <strong>糯米饭</strong>(团饭+脆哨+洋芋丝+折耳根,贵州日常早餐)<br>
+        ▸ <strong>素粉</strong>(特色酸粉)</p>
+        <div class="tag-row">
+          <span class="tag eat">补漏</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-time">中午前</div>
+      <div class="tl-place">喷水池地下街 / 万象城</div>
+      <div class="tl-body">
+        <p>下雨或时间不多就逛喷水池地下街(<strong>超强空调,价格亲民</strong>)。</p>
+        <p><strong>伴手礼清单</strong>:但家香酥鸭真空装 · 脆哨 · 刺梨干 · 青岩玫瑰糖 · 酸汤底料。</p>
+        <p>💡 本地超市买比特产店便宜很多。</p>
+        <div class="tag-row">
+          <span class="tag">伴手礼</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item highlight">
+      <div class="tl-time">返程</div>
+      <div class="tl-place">→ 贵阳北站</div>
+      <div class="tl-body">
+        <p>打车或地铁 1 号线。提前 1 小时到站。</p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <div class="ornament">— ◆ —</div>
+</section>
+
+<!-- ====== Tips ====== -->
+<section class="tips" id="tips">
+  <div class="section-label">Survival Tips · 贴士</div>
+  <h2 class="section-title">实用<span class="italic">贴士</span></h2>
+
+  <div class="tips-grid">
+
+    <div class="tip-card">
+      <div class="tip-title">🌶 关于辣度</div>
+      <div class="tip-body">贵州老板嘴里的"微辣"对外地人经常已是<strong>中辣水平</strong>。点菜时直说"辣度一般一点"比较稳妥。</div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-title">🌱 关于折耳根(鱼腥草)</div>
+      <div class="tip-body">贵州灵魂食材,<strong>气味像汽油+薄荷</strong>。丝娃娃蘸水、豆腐圆子、洋芋粑里都有。第一次吃建议先少量试——一口爱上或受不了两种结果。不吃提前说"不加折耳根"。</div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-title">📸 拍照高点总结</div>
+      <div class="tip-body">
+        ▸ 黔灵山瞰筑亭 · Day1 · 正午老城<br>
+        ▸ 东山寺 · Day2 · <strong>日落金光</strong><br>
+        ▸ 甲秀楼河畔 · Day3 · 夜景蓝调<br>
+        三个高点,三种完全不同的光线。
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-title">☕ 贵阳咖啡地图</div>
+      <div class="tip-body">官方上线中英文版贵阳咖啡地图,联动百家咖啡馆。外省游客<strong>打卡 4 家(凭身份证)可领限量杯</strong>。关注小红书"Guiyang WoW"看活动。</div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-title">🏮 关于青岩古镇</div>
+      <div class="tip-body">备选 5.4 替换方案——喷水池打车 40 分钟或北站直通车(¥10/人),五一有"大明志"穿越演出。但<strong>五一人流非常密集</strong>,体验会差。建议下次专门去黔东南/荔波时顺路。</div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-title">⚠️ 五一错峰心法</div>
+      <div class="tip-body">三大拥挤点:甲秀楼、青云市集、太平路(夜晚)。已经按<strong>下午/清晨/错峰</strong>安排。真不想挤,Day4 的鹿冲关是本次行程最清静的目的地。</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== 尾 ====== -->
+<footer class="footer">
+  <div class="footer-seal">— 黔 · 行 —</div>
+  <div class="footer-quote">"三天不吃酸,走路打蹿蹿"<br>祝旅途愉快 🌶️</div>
+</footer>
+
+<footer class="trip-footer">
+  洋芋王国 · 贵阳 · 2026 年 5 月<br>
+  <a href="../../">返回旅行日志</a> · <a href="../hanoi/">上一段：红河以北</a> · <a href="../yunnan/">下一段：香格里拉 ↗</a>
+</footer>
+
+</div>
+
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<p id="toast" role="status" aria-live="polite"></p>
+
+<script>
+  const progress = document.getElementById('progress');
+  const topBtn = document.getElementById('topBtn');
+
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progress.style.width = pct + '%';
+
+    if (h.scrollTop > 400) topBtn.classList.add('visible');
+    else topBtn.classList.remove('visible');
+  }, { passive: true });
+
+  document.getElementById('share').addEventListener('click', async () => {
+    const url = location.origin + location.pathname;
+    const toast = document.getElementById('toast');
+    try {
+      await navigator.clipboard.writeText(url);
+      toast.textContent = '链接已复制，可以粘贴给朋友';
+      toast.style.display = 'block';
+      setTimeout(() => toast.style.display = 'none', 4000);
+    } catch (e) {
+      prompt('请复制下方行程链接', url);
+    }
+  });
+</script>
+
+</body>
+</html>
