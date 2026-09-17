@@ -1,12 +1,13 @@
-# Redback 旅行计划
+# Redback 旅行日志
 
 GitHub Pages 静态站点，域名 trip.redback.me。
 
 ## 维护约定
 
 - `AGENTS.md`：给 AI / 自动化工具使用的短版维护契约。
-- `docs/TRAVEL_LOG_SPEC.md`：网站定位、页面类型、`trips.js` 字段约定、设计原则与完整发布检查清单。
-- `trips.js`：首页旅行清单的唯一结构化事实源，不另外维护平行的 trips.json / YAML。
+- `docs/TRAVEL_LOG_SPEC.md`：网站定位、页面类型、结构化字段约定、设计原则与完整发布检查清单。
+- `trips.js`：首页“旅途计划”的唯一结构化事实源，不另外维护平行的 trips.json / YAML。
+- `stories.js`：首页“旅途记录”的独立结构化事实源；记录页面放在 `stories/YYYY/<slug>/`。
 
 后续新增或修改旅程时，优先读取上述文件和当前仓库实现，不依赖旧聊天记忆还原网站状态。
 

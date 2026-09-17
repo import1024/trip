@@ -40,6 +40,7 @@ Current structure is intentionally simple and static:
 ├─ hub.css                 # homepage styles
 ├─ hub.js                  # homepage rendering and status logic
 ├─ trips.js                # canonical trip manifest
+├─ stories.js              # canonical journey-record manifest
 ├─ CNAME                   # trip.redback.me
 ├─ assets/
 │  ├─ favicon.svg
@@ -48,6 +49,10 @@ Current structure is intentionally simple and static:
 │  ├─ hanoi/
 │  ├─ yunnan/
 │  └─ indonesia/
+├─ stories/
+│  ├─ index.html           # journey-record collection
+│  └─ 2026/
+│     └─ guiyang/
 ├─ AGENTS.md
 └─ docs/
    └─ TRAVEL_LOG_SPEC.md
@@ -118,6 +123,14 @@ Rules:
 - Do not invent precise times when only a date is known.
 - For historical plans without exact transport timing, a date-boundary value is acceptable if clearly treated as coarse metadata.
 - `end` should not prematurely mark a journey as finished merely because the final flight/train has departed; use final arrival or a sensible end-of-trip boundary.
+
+### Journey-record manifest: `stories.js`
+
+`stories.js` is the separate source of truth for actual post-trip writing shown in the homepage `旅途记录` section. Records normally live under `stories/YYYY/<slug>/`; their existing trip plans remain at their original URLs.
+
+Required fields are `id`, `title`, `dates`, `path`, `summary`, and `type`. `image`, `meta`, and `planPath` are optional. When `planPath` exists, link the plan and record in both directions. Do not place records in `trips.js`, because its dates drive live plan status and countdown behavior.
+
+When photographs come from local originals, preserve their order and visual character, optimize them for web delivery, use lazy loading below the first meaningful image, and record intentional repeated placements without duplicating the underlying asset.
 
 ## 5. Page types and when to use them
 

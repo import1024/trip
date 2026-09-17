@@ -8,6 +8,7 @@ This file is the short operational contract for AI agents and automation. Read `
 
 - Treat the repository as the source of truth for the current site structure and implementation.
 - Treat `trips.js` as the single canonical manifest for the current **travel plans** shown on the homepage. Do not create a second plan registry unless the architecture is intentionally migrated.
+- Treat `stories.js` as the canonical manifest for published **journey records** shown on the homepage. Keep it separate from `trips.js`.
 - The current journeys are plans, not post-trip records. Do not present planned activities as things that actually happened.
 - Future **旅途记录 / journey records** may be added as a separate content layer for actual experiences, reflections, and photographs. Preserve the original plan rather than silently rewriting it into a record.
 - Do not invent itinerary facts, times, bookings, prices, addresses, transport details, entry rules, or visited experiences. Use the user's supplied material. When historical material is only a plan, label it as a plan/archive rather than implying it happened.
@@ -37,6 +38,16 @@ Default workflow:
 7. If a referenced JS/CSS file changed and the page uses query-string cache busting, bump the corresponding `?v=` value.
 8. Check relative links, favicon, return-to-log navigation, share behavior, mobile layout, desktop layout, and basic no-JavaScript readability.
 9. Commit the complete change to `main` unless the user asks for a branch/PR.
+
+## Publishing a journey record
+
+1. Create or update `stories/YYYY/<slug>/` and keep the original trip plan intact.
+2. Preserve the user's supplied narrative and photo order; do not infer visits that are not in the source.
+3. Add or update exactly one entry in `window.STORIES` in `stories.js`.
+4. Update the homepage no-JavaScript fallback and the `stories/` collection page.
+5. Link the record and its corresponding plan in both directions when a plan exists.
+6. Optimize local photos for the web without silently replacing or re-editing their visual character.
+7. Run the same direct-link, responsive, accessibility, sharing, and deployment checks as for a plan.
 
 ## Plan vs. journey record
 
