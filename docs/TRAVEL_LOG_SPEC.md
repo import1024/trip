@@ -47,7 +47,7 @@ Current structure is intentionally simple and static:
 │  └─ journal.css          # shared trip-page visual primitives
 ├─ 2026/
 │  ├─ hanoi/
-│  ├─ yunnan/
+│  ├─ shangri-la/
 │  └─ indonesia/
 ├─ stories/
 │  ├─ index.html           # journey-record collection
@@ -84,8 +84,8 @@ Current shape:
   dates: '2026.09.25—09.30',
   start: '2026-09-25T09:06:00+08:00',
   end: '2026-10-01T00:00:00+08:00',
-  path: '2026/yunnan/',
-  image: '2026/yunnan/poster-v2.jpg',
+  path: '2026/shangri-la/',
+  image: '2026/shangri-la/poster-v2.jpg',
   summary: '...',
   people: '1 人独行',
   type: '摄影行程',
@@ -151,7 +151,7 @@ Requirements:
 
 ### 5.2 Journal / photography plan
 
-Reference: `2026/yunnan/`.
+Reference: `2026/shangri-la/`.
 
 Use for a narrative but practical travel page centered on route, visual experience, weather choices, or photography.
 
